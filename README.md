@@ -40,6 +40,7 @@ Before launching the API the database `store.db` must be moved to the location t
 ```bash
 $ mkdir /var/lib/osmud
 $ cp /etc/osmud/store.db /var/lib/osmud/store.db
+$ cp /etc/osmud/mud_file.json /var/lib/osmud/mud_file.json
 ```
 
 osmud also expects a file for the dhcp events log to exist. This can be created with
