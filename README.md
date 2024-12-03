@@ -35,6 +35,16 @@ $ service osmud
 ```
 
 ## Launching the API on the RPi
+Use 
+
+```bash
+$ ./usr/bin/osmud_startup.sh
+```
+
+to run start start the API.
+
+### What this script does
+
 Before launching the API the database `store.db` must be moved to the location that osmud expects it to be in. This can be done with the commands
 
 ```bash
