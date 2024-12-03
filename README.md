@@ -41,7 +41,7 @@ Use
 $ ./usr/bin/osmud_startup.sh
 ```
 
-to run start start the API.
+to start the API.
 
 ### What this script does
 
