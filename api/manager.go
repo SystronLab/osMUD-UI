@@ -74,7 +74,7 @@ func (api *API) SetMudFile(w http.ResponseWriter, r *http.Request) {
 		MacAddress: mudRecord.MacAddress,
 		Ip:         mudRecord.Ip,
 		Hostname:   mudRecord.Hostname,
-		MudUrl:     "http://192.168.1.1:" + api.port + "/manager/" + macAddressParam + "/mud",
+		MudUrl:     "http://localhost:" + api.port + "/manager/" + macAddressParam + "/mud",
 	}
 
 	api.dhcpEvents.AddEvent(&event)
