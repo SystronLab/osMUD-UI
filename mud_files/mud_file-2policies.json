@@ -1,0 +1,105 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://example.com/mud/device-mud.json",
+        "last-update": "2025-02-03T13:41:10Z",
+        "cache-validity": 48,
+        "is-supported": true,
+        "systeminfo": "Example IoT Device",
+        "mfg-name": "Example Manufacturer",
+        "model-name": "Example Device Model 1",
+        "documentation": "https://example.com/docs/device-doc.html",
+        "ietf-mud:to-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "to-device-policy-1",
+                        "type": "ipv4-acl-type",
+                        "aces": {
+                            "ace": [
+                                {
+                                    "name": "to-device-rule-1",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 80
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "to-device-rule-2",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 6
+                                        },
+                                        "tcp": {
+                                            "destination-port": {
+                                                "port": 80
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        "ietf-mud:from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-device-policy-1",
+                        "type": "ipv4-acl-type",
+                        "aces": {
+                            "ace": [
+                                {
+                                    "name": "from-device-rule-1",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "destination-port": {
+                                                "port": 53
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                },
+                                {
+                                    "name": "from-device-rule-2",
+                                    "matches": {
+                                        "ipv4": {
+                                            "protocol": 17
+                                        },
+                                        "udp": {
+                                            "destination-port": {
+                                                "port": 53
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+                                        "forwarding": "accept"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

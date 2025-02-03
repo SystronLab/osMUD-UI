@@ -15,6 +15,8 @@ $ ssh root@192.168.1.1
 
 whilst connected to the RPi using ethernet
 
+The password for the testbed RPi is `osmud1234!`
+
 To SCP a file to the RPi you need to use legacy options
 ```bash
 $ scp -O [file] root@192.168.1.1:/file/destination
