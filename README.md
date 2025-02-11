@@ -10,7 +10,7 @@ A Raspberry Pi 3b running OpenWRT is used for this project. Below is instruction
 To SSH into the RPi use the command
 
 ```bash
-$ ssh root@192.168.1.1
+$ ssh root@192.168.2.1
 ```
 
 whilst connected to the RPi using ethernet
@@ -19,7 +19,7 @@ The password for the testbed RPi is `osmud1234!`
 
 To SCP a file to the RPi you need to use legacy options
 ```bash
-$ scp -O [file] root@192.168.1.1:/file/destination
+$ scp -O [file] root@192.168.2.1:/file/destination
 ```
 
 
@@ -72,7 +72,7 @@ And can be launched with
 $ ./usr/bin/api
 ```
 
-from the root directory. This starts a server running at `192.168.1.1:8080`
+from the root directory. This starts a server running at `192.168.2.1:8080`
 
 ## Launching the UI
 
