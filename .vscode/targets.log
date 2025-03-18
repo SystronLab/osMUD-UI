@@ -1,219 +1,171 @@
-make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # GNU Make 4.4.1
-# Built for Windows32
+# Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2023 Free Software Foundation, Inc.
 # License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Feb 13 11:55:12 2025
+# Make data base, printed on Tue Mar 18 10:45:44 2025
 
 # Variables
 
-# environment
-SYSTEMDRIVE = C:
 # environment
 LC_ALL = C
 # environment
 VSCEXT_EXHORT_SKOPEO_PATH = skopeo
 # environment
-USERPROFILE = C:\Users 
-\gilli
+PULSE_SERVER = unix:/mnt/wslg/PulseServer
 # environment
-LOCALAPPDATA = C:\Users\gilli\AppData\Local
+HOMEBREW_PREFIX = /home/linuxbrew/.linuxbrew
 # environment
-WSLENV = WT_SESSION:WT_PROFILE_ID:
+WSLENV = VSCODE_WSL_EXT_LOCATION/up:VSCODE_SERVER_TAR/up
 # environment
-VSCODE_CRASH_REPORTER_PROCESS_TYPE = extensionHost
-# environment
-VSCODE_CWD = D:\Files\Documents\Uni RSE
+VSCODE_CWD = /mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code
 # environment
 VSCEXT_EXHORT_IMAGE_PLATFORM = 
 # environment
-CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
-# environment
-SYSTEMROOT = C:\WINDOWS
-# environment
-PROCESSOR_LEVEL = 23
-# environment
-PSMODULEPATH = C:\Users\gilli\Documents\WindowsPowerShell\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+NVM_DIR = /home/peter/.nvm
 # environment
 VSCEXT_EXHORT_GRADLE_PATH = gradle
 # environment
 VSCEXT_TRACK_RECOMMENDATION_ACCEPTANCE_COMMAND = rhda.trackRecommendationAcceptance
-# environment
-GOOGLE_API_KEY = no
 # default
-MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+MAKE_COMMAND := make
 # environment
-GPU_FORCE_64BIT_PTR = 0
-# environment
-GOPATH = C:\Users\gilli\go
+VSCODE_HANDLES_SIGPIPE = true
 # automatic
-@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+@D = $(patsubst %/,%,$(dir $@))
 # environment
 VSCEXT_EXHORT_SYFT_CONFIG_PATH = 
-# environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_19268_ACIZCEMDFCQPMPVP
 # environment
 VSCEXT_EXHORT_PIP_PATH = pip
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
 .VARIABLES := 
-# automatic
-%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
 # environment
-GPU_MAX_HEAP_SIZE = 100
+PWD = /home/peter/Proj/osMUD-UI
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
 # environment
 VSCEXT_EXHORT_MVN_PATH = mvn
 # automatic
-^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+^D = $(patsubst %/,%,$(dir $^))
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = C:\Users\gilli\AppData\Roaming\Code\CachedData\e249dada235c2083c83813bd65b7f4707fb97b76
+NVM_INC = /home/peter/.nvm/versions/node/v20.13.1/include/node
 # environment
 LANG = C
 # default
 .LOADED := 
 # environment
-TMP = C:\Users\gilli\AppData\Local\Temp
+HOMEBREW_REPOSITORY = /home/linuxbrew/.linuxbrew/Homebrew
 # default
-.INCLUDE_DIRS := .
-# environment
-PROCESSOR_ARCHITEW6432 = AMD64
+.INCLUDE_DIRS := /home/linuxbrew/.linuxbrew/Cellar/make/4.4.1/include /usr/local/include /usr/include
 # makefile
 MAKEFLAGS = pqrR
-# environment
-ONEDRIVE = C:\Users\gilli\OneDrive
 # makefile
-CURDIR := d:/Files/Documents/Uni RSE/osMUD-UI
+CURDIR := /home/peter/Proj/osMUD-UI
 # environment
 VSCEXT_EXHORT_GO_PATH = go
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# environment
+VSCODE_L10N_BUNDLE_LOCATION = 
 # automatic
-*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+*D = $(patsubst %/,%,$(dir $*))
 # environment
 VSCEXT_EXHORT_PYTHON_PATH = python
-# environment
-PROGRAMFILES = C:\Program Files (x86)
 # environment
 MFLAGS = -pqrR
 # default
 .SHELLFLAGS := -c
 # environment
-COMMONPROGRAMW6432 = C:\Program Files\Common Files
+NVM_BIN = /home/peter/.nvm/versions/node/v20.13.1/bin
+# environment
+WSL2_GUI_APPS_ENABLED = 1
+# environment
+WAYLAND_DISPLAY = wayland-0
 # automatic
-+D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
++D = $(patsubst %/,%,$(dir $+))
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
 # environment
 VSCEXT_EXHORT_PODMAN_PATH = podman
 # automatic
 @F = $(notdir $@)
-# environment
-VSCODE_PID = 19268
-# environment
-CUDA_PATH = Z:\NVIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6
-# environment
-__PSLOCKDOWNPOLICY = 0
 # automatic
-?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
-# environment
-GOOGLE_DEFAULT_CLIENT_ID = no
+?D = $(patsubst %/,%,$(dir $?))
 # environment
 VSCEXT_EXHORT_PIP3_PATH = pip3
-# environment
-DYLD_LIBRARY_PATH = C:\ProgramFiles\MySQL\MySQL Server 5.5\lib
-# environment
-WT_PROFILE_ID = {61c54bbd-c2c6-5271-96e7-009a87ff44bf}
 # automatic
 *F = $(notdir $*)
 # environment
 VSCEXT_EXHORT_SYFT_PATH = syft
 # environment
-CUDA_PATH_V12_6 = Z:\NVIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6
-# environment
-GPU_SINGLE_ALLOC_PERCENT = 100
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
 # automatic
-<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+<D = $(patsubst %/,%,$(dir $<))
 # environment
-VSCODE_NLS_CONFIG = {"userLocale":"en-us","osLocale":"en-gb","resolvedLanguage":"en","defaultMessagesFile":"D:\\Files\\Programs\\Utilities\\Microsoft VS Code\\resources\\app\\out\\nls.messages.json","locale":"en-us","availableLanguages":{}}
-# environment
-AMDRMPATH = C:\Program Files\AMD\RyzenMaster\
+VSCODE_NLS_CONFIG = {"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/peter/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/out/nls.messages.json","locale":"en","availableLanguages":{}}
 # default
-MAKE_HOST := Windows32
+MAKE_HOST := x86_64-pc-linux-gnu
 # environment
-GPU_USE_SYNC_OBJECTS = 1
-# environment
-PROGRAMDATA = C:\ProgramData
-# default
-SHELL := sh.exe
-# environment
-HOMEPATH = \Users\gilli
+INFOPATH = /home/linuxbrew/.linuxbrew/share/info:
+# makefile
+SHELL = /bin/sh
 # default
 MAKECMDGOALS := all
 # environment
-DRIVERDATA = C:\Windows\System32\Drivers\DriverData
-# environment
-COMSPEC = C:\WINDOWS\system32\cmd.exe
-# environment
-WINDIR = C:\WINDOWS
-# environment
-GPU_MAX_ALLOC_PERCENT = 100
+SHLVL = 0
 # environment
 MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = Z:\NVIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;Z:\NVIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;C:\Program Files\Eclipse Adoptium\jdk-8.0.322.6-hotspot\bin;C:\Program Files\AdoptOpenJDK\jdk-11.0.9.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Files\Programs\Utilities\Python\Scripts\;D:\Files\Programs\Utilities\Python\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files (x86)\OpenVPN\bin;C:\WINDOWS\System32\OpenSSH\;D:\Files\Programs\Utilities\MATLAB\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;D:\Files\Programs\Utilities\PuTTY\;C:\Program Files (x86)\STMicroelectronics\STM32 ST-LINK Utility\ST-LINK Utility;D:\Files\Programs\Utilities\Node.js\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;D:\Files\Programs\Utilities\FlutterSDK\flutter\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Go\bin;D:\Files\Programs\Utilities\Git\cmd;C:\Program Files\NVIDIA Corporation\Nsight Compute 2024.3.0\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Ruby31-x64\bin;C:\Users\gilli\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\gilli\AppData\Local\Programs\Python\Python312\;C:\Users\gilli\Python\Scripts\;C:\Users\gilli\Python\;C:\Users\gilli\AppData\Local\Microsoft\WindowsApps;C:\ProgramFiles\MySQL\MySQL Server 5.5\bin;C:\Users\gilli\AppData\Local\Microsoft\WindowsApps;D:\Files\Programs\Utilities\Microsoft VS Code\bin;D:\Files\Programs\Utilities\TexLive\2021\bin\win32;C:\Users\gilli\AppData\Local\GitHubDesktop\bin;C:\Users\gilli\AppData\Roaming\npm;C:\Users\gilli\.dotnet\tools;C:\msys64\ucrt64\bin;D:\Files\Programs\Utilities\FlutterSDK\flutter\bin;C:\Users\gilli\go\bin;Z:\NVIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6\bin;Z:\N 
-VIDIA\NVIDIA GPU Computing Toolkit\CUDA\v12.6\libnvvp;
-# environment
-COMPUTERNAME = PETER-DESKTOP
+PATH = /home/peter/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/bin/remote-cli:/home/peter/.local/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/peter/.nvm/versions/node/v20.13.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Microsoft SQL Server/130/Tools/Binn/:/mnt/c/Program Files/MiKTeX/miktex/bin/x64/:/mnt/c/ProgramData/Anaconda3:/mnt/c/ProgramData/Anaconda3/Scripts:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/MATLAB/R2024a/runtime/win64:/mnt/c/Program Files/MATLAB/R2024a/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Strawberry/c/bin:/mnt/c/Strawberry/perl/site/bin:/mnt/c/Strawberry/perl/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/PuTTY/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Ruby31-x64/bin:/mnt/c/Ruby32-x64/bin:/mnt/c/Users/pg850/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/pg850/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/pg850/AppData/Roaming/nvm:/mnt/c/Program Files/nodejs:/mnt/c/Users/pg850/AppData/Roaming/npm:/mnt/c/Users/pg850/go/bin:/mnt/c/Users/pg850/.dotnet/tools:/snap/bin:/home/peter/Proj/MUD-UI/:/usr/bin:/home/peter/osmud/
 # default
 MAKEFILES := 
 # automatic
 ^F = $(notdir $^)
 # environment
-PROMPT = $P$G
-# environment
-CHOCOLATEYLASTPATHUPDATE = 133577388350550848
-# environment
 VSCEXT_USE_PIP_DEP_TREE = false
 # environment
-WT_SESSION = 1cb2c3ac-0159-4217-a149-9276835ec27a
-# environment
-LOGONSERVER = \\PETER-DESKTOP
-# environment
-VSCEXT_TELEMETRY_ID = 0cd81c43-7c83-4e0b-80da-1703963fce32
-# environment
-USERNAME = gilli
+VSCEXT_TELEMETRY_ID = 177e3755-6484-4009-9f49-641b53b94290
 # environment
 VSCEXT_EXHORT_DOCKER_PATH = docker
 # environment
-COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 VSCEXT_STACK_ANALYSIS_COMMAND = rhda.stackAnalysis
 # automatic
 ?F = $(notdir $?)
 # environment
-PROGRAMW6432 = C:\Program Files
+NAME = UOY22Y177
 # environment
-PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW;.CPL
+VSCODE_SERVER_TAR = /mnt/c/Users/pg850/vscode-remote-wsl/stable/ddc367ed5c8936efe395cffeec279b04ffd7db78/vscode-server-stable-linux-x64.tar.gz
 # environment
 VSCEXT_EXHORT_NPM_PATH = npm
+# environment
+HOSTTYPE = x86_64
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
 # automatic
 +F = $(notdir $+)
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# environment
-USERDOMAIN = PETER-DESKTOP
+WSL_INTEROP = /run/WSL/966_interop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
-OS = Windows_NT
+LOGNAME = peter
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/pg850/.vscode/extensions/ms-vscode-remote.remote-wsl-0.88.5
 # environment
 VSCEXT_EXHORT_SKOPEO_CONFIG_PATH = 
 # environment
@@ -224,73 +176,56 @@ VSCEXT_MATCH_MANIFEST_VERSIONS = true
 .DEFAULT_GOAL := all
 # environment
 VSCEXT_VULNERABILITY_ALERT_SEVERITY = Error
+# environment
+DISPLAY = :0
+# environment
+USER = peter
 # default
 MAKE_VERSION := 4.4.1
 # environment
 VSCEXT_UTM_SOURCE = vscode
 # environment
-PROGRAMFILES(X86) = C:\Program Files (x86)
+HOMEBREW_CELLAR = /home/linuxbrew/.linuxbrew/Cellar
 # environment
-PROG27B48B2C052 = 1
+_ = /home/peter/.vscode-server/bin/ddc367ed5c8936efe395cffeec279b04ffd7db78/node
 # environment
-USERDOMAIN_ROAMINGPROFILE = PETER-DESKTOP
+XDG_RUNTIME_DIR = /run/user/1000/
 # environment
-NUMBER_OF_PROCESSORS = 12
-# environment
-PUBLIC = C:\Users\Public
-# environment
-MOZ_PLUGIN_PATH = C:\Program Files (x86)\Foxit Software\Foxit Reader\plugins\
-# environment
-APPDATA = C:\Users\gilli\AppData\Roaming
-# environment
-HOMEDRIVE = C:
-# environment
-PROCESSOR_ARCHITECTURE = x86
+VSCODE_IPC_HOOK_CLI = /run/user/1000/vscode-ipc-c755b931-fd73-42b5-bf50-d1449a2013e1.sock
 # environment
 VSCEXT_EXHORT_PYTHON3_PATH = python3
+# environment
+NVM_CD_FLAGS = 
+# environment
+VSCODE_DOTNET_INSTALL_TOOL_ORIGINAL_HOME = /home/peter
 # environment
 VSCEXT_ENABLE_PYTHON_BEST_EFFORTS_INSTALLATION = false
 # makefile (from 'Makefile', line 2)
 BUILD_DIR = bin
 # environment
-COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+HOME = /home/peter
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-TEMP = C:\Users\gilli\AppData\Local\Temp
-# environment
-VSCODE_IPC_HOOK = \\.\pipe\974b9a9c-1.97.1-main-sock
-# environment
-GOOGLE_DEFAULT_CLIENT_SECRET = no
+TERM = xterm-256color
 # environment
 VSCEXT_USE_GO_MVS = false
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
-# environment
-CSSCRIPT_INC = C:\ProgramData\cs-script\inc
 # default
 SUFFIXES := 
 # environment
-ALLUSERSPROFILE = C:\ProgramData
-# environment
-SESSIONNAME = Console
-# environment
-VSCODE_CLI = 1
-# environment
-ELECTRON_NO_ATTACH_CONSOLE = 1
+WSL_DISTRO_NAME = Ubuntu-22.04
 # default
-.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver output-sync load dospaths
-# environment
-PROCESSOR_REVISION = 0101
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs notintermediate shell-export archives jobserver jobserver-fifo output-sync check-symlink load
 # environment
 VSCODE_ESM_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
-PROCESSOR_IDENTIFIER = AMD64 Family 23 Model 1 Stepping 1, Auth 
-enticAMD
+__TELEMETRY_CLIENT_ID = 454a9296-62ee-4a94-8cfb-ce77bf191274
 # variable set hash-table stats:
-# Load=138/1024=13%, Rehash=0, Collisions=13/170=8%
+# Load=107/1024=10%, Rehash=0, Collisions=12/142=8%
 
 # Pattern-specific Variable Values
 
@@ -298,9 +233,9 @@ enticAMD
 
 # Directories
 
-# . (key d:/Files/Documents/Uni RSE/osMUD-UI, mtime 1739447591): 19 files, no impossibilities.
+# . (device 2080, inode 524): 20 files, no impossibilities.
 
-# 19 files, no impossibilities in 1 directories.
+# 20 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -312,7 +247,7 @@ enticAMD
 Makefile:
 #  Implicit rule search has been done.
 #  File is secondary (prerequisite of .SECONDARY).
-#  Last modified 2025-02-13 11:53:11
+#  Last modified 2025-02-03 11:08:24.105032372
 #  File has been updated.
 #  Successfully updated.
 
@@ -339,6 +274,7 @@ all: dhcp_mock.build api.build
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
 
+ 
 api.build:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -389,13 +325,12 @@ dhcp_mock.build:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 25 / storage = 200 B / avg = 8 B
-# current buf: size = 8174 B / used = 200 B / count  
-= 25 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 29 / storage = 289 B / avg = 9 B
+# current buf: size = 8162 B / used = 289 B / count = 29 / avg = 9 B
 
-# strcache performance: lookups = 37 / hit rate = 32%
+# strcache performance: lookups = 40 / hit rate = 27%
 # hash-table stats:
-# Load=25/8192=0%, Rehash=0, Collisions=0/37=0%
-# Finished Make data base on Thu Feb 13 11:55:12 2025
+# Load=29/8192=0%, Rehash=0, Collisions=0/40=0%
+# Finished Make data base on Tue Mar 18 10:45:45 2025
 
  

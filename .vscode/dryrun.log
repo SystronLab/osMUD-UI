@@ -1,8 +1,8 @@
-make.exe --dry-run --always-make --keep-going --print-directory
-make: Entering directory 'd:/Files/Documents/Uni RSE/osMUD-UI'
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/peter/Proj/osMUD-UI'
 env CC=arm-linux-gnueabi-gcc CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=7  \
                 go build -o bin/dhcp_mock -ldflags "-linkmode 'internal' -extldflags '-static'"\
                 -tags sqlite_omit_load_extension ./tools/dhcp_mock
 go build -o bin/api ./api
-make: Leaving directory 'd:/Files/Documents/Uni RSE/osMUD-UI'
+make: Leaving directory '/home/peter/Proj/osMUD-UI'
  
