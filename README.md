@@ -2,6 +2,11 @@
 
 A tool to manage and edit Manufacturer Usage Description (MUD) files from the browser.
 
+# OpenWRT and osMUD
+OpenWRT is the operating system used to run osMUD. It can be built for many devices and architectures following the build instructions at https://github.com/osmud/osmud.
+
+OpenWRT and osMUD must be compiled for the target device, with osMUD being built as an ipk file to be installed by opkg on the device running OpenWRT.
+
 # Running on the Raspberry Pi
 
 A Raspberry Pi 3b running OpenWRT is used for this project. Below is instructions for connecting to the Raspberry Pi, setting up osMUD and the API and connecting the UI to the Raspberry Pi.
