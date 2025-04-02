@@ -50,7 +50,7 @@ $ service osmud
 Use 
 
 ```bash
-$ ./usr/bin/osmud_startup.sh
+$ ./../usr/bin/osmud_startup.sh
 ```
 
 to start the API.
