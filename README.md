@@ -17,8 +17,13 @@ To SSH into the RPi use the command
 ```bash
 $ ssh root@192.168.2.1
 ```
+whilst connected to the RPi using ethernet.
 
-whilst connected to the RPi using ethernet
+If you get an error requiring ssh-rsa use the command
+
+```
+$ ssh -oHostKeyAlgorithms=+ssh-rsa root@192.168.2.1
+```
 
 The password for the testbed RPi is `osmud1234!`
 
