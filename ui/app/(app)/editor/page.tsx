@@ -1,7 +1,6 @@
 "use client";
 
 import MudInfo from "@/components/MudInfo";
-import Navbar from "@/components/Navbar/Navbar";
 import PolicyList from "@/components/PolicyList";
 import ScreenLoading from "@/components/ScreenLoading";
 import { MudContext } from "@/contexts/MudContext";
@@ -104,7 +103,6 @@ export default function page() {
       }}
     >
       <div className="flex flex-col gap-y-4">
-        <Navbar />
         {refreshing ? (
           <div className="my-14 flex flex-col place-items-center justify-center text-primary-content">
             <span className="loading loading-ring loading-lg"></span>

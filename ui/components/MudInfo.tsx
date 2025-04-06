@@ -4,11 +4,16 @@ import { MudContext } from "@/contexts/MudContext";
 import KvItem from "./KvItem";
 import React from "react";
 import classNames from "classnames";
+import LoadFile from "../components/Navbar/LoadFile";
+import SaveMud from "../components/Navbar/SaveMud";
 
 export default function MudInfo() {
   var { mud } = React.useContext(MudContext);
 
   return (
+    <>
+    <LoadFile/>
+    <SaveMud/>
     <div className="flex flex-col gap-y-1">
       <KvItem
         title="System Info"
@@ -58,5 +63,6 @@ export default function MudInfo() {
         {mud.isSupported ? "Supported" : "Not Supported"}
       </p>
     </div>
+    </>
   );
 }
