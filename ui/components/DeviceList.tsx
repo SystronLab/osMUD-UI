@@ -3,6 +3,9 @@ import { ApiError } from "@/services/api/NetworkService";
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import ApiErrorAlert from "./ApiErrorAlert";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function DeviceList() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,15 +22,21 @@ export default function DeviceList() {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <div className="max-w-7xl mx-auto px-4 py-2">
       <div className="mb-6 flex justify-center">
-        <input
-          type="text"
-          placeholder="Search by MAC, Hostname or IP"
-          className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <div className="relative w-full max-w-md">
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+          />
+          <input
+            type="text"
+            placeholder="Search by MAC, Hostname or IP"
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
       </div>
 
       {error && <ApiErrorAlert error={error} />}
@@ -36,16 +45,18 @@ export default function DeviceList() {
         <table className="min-w-full table-auto divide-y divide-gray-200">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-700">
+              <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider text-gray-700">
                 MAC Address
               </th>
-              <th className="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-700">
+              <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider text-gray-700">
                 Hostname
               </th>
-              <th className="px-6 py-3 text-left text-xs font-bold uppercase tracking-wider text-gray-700">
+              <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider text-gray-700">
                 Assigned IP
               </th>
-              <th className="px-6 py-3"></th>
+              <th className="px-6 py-3 text-left text-sm font-bold uppercase tracking-wider text-gray-700">
+                Action
+              </th>
             </tr>
           </thead>
 
@@ -58,10 +69,12 @@ export default function DeviceList() {
                 <td className="px-6 py-4">
                   <a
                     href={`/editor?mac=${encodeURIComponent(d.macAddress)}`}
-                    className="inline-block px-4 py-2 text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-md transition"
+                    className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-teal-600 hover:bg-teal-700 rounded-md transition"
                   >
+                    <FontAwesomeIcon icon={faPenToSquare} />
                     Edit
                   </a>
+
                 </td>
               </tr>
             ))}
