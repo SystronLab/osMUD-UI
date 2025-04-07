@@ -15,6 +15,7 @@ import { useSearchParams } from "next/navigation";
 import SaveMud from "@/components/Navbar/SaveMud";
 
 export default function page() {
+  const [mudUploaded, setMudUploaded] = useState(false);
   const searchParams = useSearchParams();
   const { refetch } = useQuery<any, ApiError>(
     "getDevice",
@@ -72,6 +73,7 @@ export default function page() {
     setMud(newMud);
     setRawMud(loadedMud);
     setBlockedPolicies([]);
+    setMudUploaded(true);
     setLoading(false);
   };
 
@@ -113,8 +115,12 @@ export default function page() {
           <div className="w-full mt-8 mb-10 mx-auto bg-base-100 shadow-md rounded-xl px-6 py-8">
             <section className="flex flex-col gap-y-8">
               <MudInfo />
-              <PolicyList />
-              <SaveMud />
+              {mudUploaded && (
+                <>
+                  <PolicyList />
+                  <SaveMud />
+                </>
+              )}
               {showMud && (
                 <>
                   <div className="border-b border-black mt-8" />
