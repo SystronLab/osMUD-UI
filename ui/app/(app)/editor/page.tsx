@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { useSearchParams } from "next/navigation";
 import SaveMud from "@/components/Navbar/SaveMud";
+import { Transition } from "@headlessui/react";
 
 export default function page() {
   const [mudUploaded, setMudUploaded] = useState(false);
@@ -115,12 +116,21 @@ export default function page() {
           <div className="w-full mt-8 mb-10 mx-auto bg-base-100 shadow-md rounded-xl px-6 py-8">
             <section className="flex flex-col gap-y-8">
               <MudInfo />
-              {mudUploaded && (
-                <>
+              <Transition
+                show={mudUploaded}
+                enter="transition-all duration-1000 ease-in-out"
+                enterFrom="opacity-0 max-h-0"
+                enterTo="opacity-100 max-h-[1000px]"
+                leave="transition-all duration-500 ease-in-out"
+                leaveFrom="opacity-100 max-h-[1000px]"
+                leaveTo="opacity-0 max-h-0"
+              >
+                <div >
                   <PolicyList />
                   <SaveMud />
-                </>
-              )}
+                </div>
+              </Transition>
+
               {showMud && (
                 <>
                   <div className="border-b border-black mt-8" />
