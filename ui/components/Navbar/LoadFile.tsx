@@ -25,7 +25,7 @@ export default function LoadFile() {
   }
 
   return (
-    <div className="w-full max-w-full border border-base-300 rounded-lg p-6 bg-base-100 shadow-sm">
+    <div className="w-full max-w-full border border-base-300 rounded-lg pl-6 pr-6 pt-4 pb-4 bg-base-100 shadow-sm">
       {/* Heading */}
       <div className="flex items-center gap-3 mb-1">
         <FontAwesomeIcon icon={faUpload} className="text-teal-600 text-xl" />
