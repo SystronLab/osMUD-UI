@@ -127,7 +127,9 @@ export default function page() {
               >
                 <div >
                   <PolicyList />
-                  <SaveMud />
+                  <div className="flex justify-center mt-7">
+                    <SaveMud buttonClassName="w-96" />
+                  </div>
                 </div>
               </Transition>
 
