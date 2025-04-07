@@ -42,7 +42,7 @@ export default function LoadFile() {
       {/* File input */}
       <input
         type="file"
-        className="file-input file-input-bordered w-full max-w-md mb-1"
+        className="file-input file-input-bordered w-full max-w-md mb-1 rounded-md"
         onChange={(e) => {
           if (!e?.target?.files) return;
           setError(false);

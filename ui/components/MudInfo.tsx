@@ -15,7 +15,7 @@ export default function MudInfo() {
         <h2 className="text-2xl font-bold text-base-content">Device Details</h2>
         <span
           className={classNames(
-            "inline-block px-3 py-1 text-sm font-medium rounded-full",
+            "inline-block px-3 py-1 text-sm font-medium rounded-md",
             mud.isSupported ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
           )}
         >
