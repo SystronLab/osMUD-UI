@@ -1,78 +1,83 @@
 "use client";
 
 import React from "react";
-import Modal from "../Modal";
 import { MudContext } from "@/contexts/MudContext";
 import MudStore from "@/services/MudStore";
-import ModalService from "@/services/ModalService";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpload } from "@fortawesome/free-solid-svg-icons";
 import classNames from "classnames";
 
-interface LoadFileProps {
-  buttonClassName?: string;
-}
-
-export default function LoadFile(props: LoadFileProps) {
-  var MudCtx = React.useContext(MudContext);
+export default function LoadFile() {
+  const MudCtx = React.useContext(MudContext);
   const [files, setFiles] = React.useState("");
   const [error, setError] = React.useState(false);
-  const modalId = "navbar-load-file";
 
   function onLoadFile(e: React.MouseEvent) {
     e.preventDefault();
     setError(false);
-    if (files == "") {
+    if (files === "") {
       setError(true);
       return;
     }
 
     MudStore.StoreJson(files);
     MudCtx.load();
-
-    ModalService.closeWithId(modalId);
   }
-  console.log("Load: ", Date.now())
+
   return (
-    <>
-      <Modal
-        id={modalId}
-        title="Load MUD File"
-        className={classNames(props.buttonClassName, {
-          "btn-disabled": MudCtx.refreshing,
-        })}
+    <div className="w-full max-w-full border border-base-300 rounded-lg p-6 bg-base-100 shadow-sm">
+      {/* Heading */}
+      <div className="flex items-center gap-3 mb-1">
+        <FontAwesomeIcon icon={faUpload} className="text-teal-600 text-xl" />
+        <h3 className="text-lg font-semibold text-base-content">
+          Upload a MUD File
+        </h3>
+      </div>
+
+      {/* Description for layman users */}
+      <p className="text-sm text-base-content mb-2 leading-relaxed">
+        Upload your MUD file to view and edit its network configuration.
+      </p>
+
+      {/* File input */}
+      <input
+        type="file"
+        className="file-input file-input-bordered w-full max-w-md mb-1"
+        onChange={(e) => {
+          if (!e?.target?.files) return;
+          setError(false);
+          try {
+            const fileReader = new FileReader();
+            fileReader.readAsText(e.target.files[0], "UTF-8");
+            fileReader.onload = (e) => {
+              setFiles((e.target?.result as string) ?? "");
+            };
+          } catch {
+            setError(true);
+          }
+        }}
+      />
+
+      {/* Error message */}
+      {error && (
+        <p className="text-error text-sm mt-1">
+          An error occurred loading the MUD file. Please try again.
+        </p>
+      )}
+
+      {/* Submit button */}
+      <button
+        className={classNames(
+          "btn mt-4 text-white bg-teal-600 hover:bg-teal-700 rounded-md",
+          {
+            "btn-disabled": MudCtx.refreshing,
+          }
+        )}
+        onClick={onLoadFile}
       >
-        <div className="flex flex-col">
-          <h2 className="font-semibold text-2xl mb-2">Load MUD File</h2>
-          <p className="mb-4">Upload a valid mud file below:</p>
-          <input
-            type="file"
-            className="mb-4 file-input file-input-bordered"
-            onChange={(e) => {
-              if (e?.target?.files == null) return;
-              setError(false);
-              try {
-                const fileReader = new FileReader();
-                fileReader.readAsText(e?.target?.files[0], "UTF-8");
-                fileReader.onload = (e) => {
-                  console.log("e.target.result", e.target?.result);
-                  setFiles((e.target?.result as string) ?? "");
-                };
-              } catch {
-                setError(true);
-              }
-            }}
-          />
-          <div className="">
-            {error && (
-              <p className="text-error mb-2">
-                An error ocurred loading the MUD file, please try again
-              </p>
-            )}
-            <button className="btn btn-accent mt-2" onClick={onLoadFile}>
-              Load
-            </button>
-          </div>
-        </div>
-      </Modal>
-    </>
+        <FontAwesomeIcon icon={faUpload} className="mr-2" />
+        Load MUD File
+      </button>
+    </div>
   );
 }

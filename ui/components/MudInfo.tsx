@@ -39,11 +39,7 @@ export default function MudInfo() {
           </div>
         </div>
         <div className="w-full h-full md:w-1/3 flex items-start justify-center md:justify-end">
-          <div className="w-full h-full">
-            <LoadFile
-              buttonClassName="w-full h-full text-lg min-h-[100px] rounded-lg shadow-md flex flex-col items-center justify-center gap-1 bg-teal-600 text-white hover:bg-teal-700 transition-colors"
-            />
-          </div>
+          <LoadFile />
         </div>
       </div>
     </div>
