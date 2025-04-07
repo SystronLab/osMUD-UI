@@ -33,7 +33,7 @@ export default function SaveMud(props: SaveMudProps) {
     <button
       onClick={save}
       className={classNames(
-        "btn text-white bg-teal-600 hover:bg-teal-700 transition-colors rounded-md flex items-center gap-2 px-4 py-2",
+        "btn text-white btn-success transition-colors rounded-md flex items-center gap-2 px-4 py-2",
         props.buttonClassName,
         {
           "btn-disabled": mudCtx.refreshing,
