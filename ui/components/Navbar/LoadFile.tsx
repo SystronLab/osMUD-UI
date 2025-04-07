@@ -41,7 +41,7 @@ export default function LoadFile(props: LoadFileProps) {
         })}
       >
         <div className="flex flex-col">
-          <h2 className="font-semibold text-2xl mb-2">Load File</h2>
+          <h2 className="font-semibold text-2xl mb-2">Load MUD File</h2>
           <p className="mb-4">Upload a valid mud file below:</p>
           <input
             type="file"

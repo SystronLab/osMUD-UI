@@ -12,6 +12,7 @@ import { MudFile, DefaultMudInfo } from "@/types/Mud";
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { useSearchParams } from "next/navigation";
+import SaveMud from "@/components/Navbar/SaveMud";
 
 export default function page() {
   const searchParams = useSearchParams();
@@ -112,7 +113,7 @@ export default function page() {
           <section className="px-6 flex flex-col gap-y-8">
             <MudInfo />
             <PolicyList />
-
+            <SaveMud />
             {showMud && (
               <>
                 <div className="border-b border-black mt-8" />
