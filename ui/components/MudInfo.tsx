@@ -10,7 +10,7 @@ export default function MudInfo() {
   const { mud } = React.useContext(MudContext);
 
   return (
-    <div className="w-full mt-8 mx-auto bg-base-100 shadow-md rounded-xl px-6 py-8">
+    <div className="w-full mx-auto">
       <div className="flex items-center justify-between mb-1">
         <h2 className="text-2xl font-bold text-base-content">Device Details</h2>
         <span

@@ -61,7 +61,7 @@ export default function LoadFile() {
       {/* Error message */}
       {error && (
         <p className="text-error text-sm mt-1">
-          An error occurred loading the MUD file. Please try again.
+          Please upload a valid MUD file.
         </p>
       )}
 

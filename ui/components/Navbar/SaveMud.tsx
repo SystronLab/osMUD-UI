@@ -5,14 +5,15 @@ import ManagerService from "@/services/api/ManagerService";
 import classNames from "classnames";
 import { useSearchParams } from "next/navigation";
 import React, { useContext } from "react";
-import { flushSync } from "react-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFloppyDisk } from "@fortawesome/free-solid-svg-icons";
 
 interface SaveMudProps {
   buttonClassName?: string;
 }
 
 export default function SaveMud(props: SaveMudProps) {
-  const { blockedPolicies } = React.useContext(MudContext);
+  const { blockedPolicies } = useContext(MudContext);
   const searchParams = useSearchParams();
   const mudCtx = useContext(MudContext);
 
@@ -29,15 +30,18 @@ export default function SaveMud(props: SaveMudProps) {
   }
 
   return (
-    <>
-      <button
-        onClick={save}
-        className={classNames("btn", props.buttonClassName, {
+    <button
+      onClick={save}
+      className={classNames(
+        "btn text-white bg-teal-600 hover:bg-teal-700 transition-colors rounded-md flex items-center gap-2 px-4 py-2",
+        props.buttonClassName,
+        {
           "btn-disabled": mudCtx.refreshing,
-        })}
-      >
-        Apply MUD File
-      </button>
-    </>
+        }
+      )}
+    >
+      <FontAwesomeIcon icon={faFloppyDisk} className="text-white text-lg" />
+      Apply MUD Policy
+    </button>
   );
 }

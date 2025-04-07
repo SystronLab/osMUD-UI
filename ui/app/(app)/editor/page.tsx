@@ -110,19 +110,21 @@ export default function page() {
             <p className="font-semibold mt-6">Applying MUD Policy...</p>
           </div>
         ) : (
-          <section className="px-6 flex flex-col gap-y-8">
-            <MudInfo />
-            <PolicyList />
-            <SaveMud />
-            {showMud && (
-              <>
-                <div className="border-b border-black mt-8" />
-                <pre>{JSON.stringify(mud, undefined, 2)}</pre>
-                <div className="border-b border-black" />
-                <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
-              </>
-            )}
-          </section>
+          <div className="w-full mt-8 mb-10 mx-auto bg-base-100 shadow-md rounded-xl px-6 py-8">
+            <section className="flex flex-col gap-y-8">
+              <MudInfo />
+              <PolicyList />
+              <SaveMud />
+              {showMud && (
+                <>
+                  <div className="border-b border-black mt-8" />
+                  <pre>{JSON.stringify(mud, undefined, 2)}</pre>
+                  <div className="border-b border-black" />
+                  <pre>{JSON.stringify(MudStore.LoadJson(), undefined, 2)}</pre>
+                </>
+              )}
+            </section>
+          </div>
         )}
       </div>
     </MudContext.Provider>
