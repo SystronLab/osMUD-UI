@@ -59,7 +59,7 @@ export default function PolicyList() {
   return (
     <>
       <hr></hr>
-      <div className="grid lg:grid-cols-8">
+      <div className="grid lg:grid-cols-9">
         <div className="flex flex-col gap-y-0 col-span-2 border-r border-r-base-200">
           <PolicyListNavigation
             title="From Device Policies"
@@ -104,7 +104,7 @@ export default function PolicyList() {
             }
           />
         </div>
-        <div className="lg:col-span-6 lg:pl-4">
+        <div className="lg:col-span-7 lg:pl-4">
           <Policy
             direction={activePolicyDirection}
             acl={MudCtx.mud.acls.find((acl) =>
