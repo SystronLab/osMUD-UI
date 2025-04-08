@@ -4,59 +4,42 @@ import { MudContext } from "@/contexts/MudContext";
 import KvItem from "./KvItem";
 import React from "react";
 import classNames from "classnames";
+import LoadFile from "../components/Navbar/LoadFile";
 
 export default function MudInfo() {
-  var { mud } = React.useContext(MudContext);
+  const { mud } = React.useContext(MudContext);
 
   return (
-    <div className="flex flex-col gap-y-1">
-      <KvItem
-        title="System Info"
-        value={mud.systemInfo}
-        help={MudHelp.systeminfo}
-      />
-      <KvItem
-        title="Last Updated"
-        value={mud.lastUpdate}
-        help={MudHelp.lastUpdate}
-      />
-      <KvItem
-        title="Cache Validity"
-        suffix="hours"
-        value={mud.cacheValidity}
-        help={MudHelp.cacheValidity}
-      />
-      <KvItem title="URL" value={mud.mudUrl} help={MudHelp.mudUrl} url />
-      <KvItem
-        title="Signature"
-        value={mud.mudSignature}
-        help={MudHelp.mudSignature}
-        url
-      />
-      <KvItem
-        title="Manufacturer Name"
-        value={mud.mfgName}
-        help={MudHelp.mfgName}
-      />
-      <KvItem
-        title="Firmware Rev"
-        value={mud.firmwareRev}
-        help={MudHelp.firmwareRev}
-      />
-      <KvItem
-        title="Software Rev"
-        value={mud.softwareRev}
-        help={MudHelp.softwareRev}
-      />
-      <KvItem title="Documentation" value={mud.documentation} url />
-      <p
-        className={classNames(
-          "font-semibold",
-          mud.isSupported ? "text-success" : "text-error"
-        )}
-      >
-        {mud.isSupported ? "Supported" : "Not Supported"}
-      </p>
+    <div className="w-full mx-auto">
+      <div className="flex items-center justify-between mb-1">
+        <h2 className="text-2xl font-bold text-base-content">Device Details</h2>
+        <span
+          className={classNames(
+            "inline-block px-3 py-1 text-sm font-medium rounded-md",
+            mud.isSupported ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+          )}
+        >
+          {mud.isSupported ? "Supported" : "Not Supported"}
+        </span>
+      </div>
+      <hr className="mb-6"></hr>
+      <div className="flex flex-col md:flex-row gap-6">
+        {/* Left Column: Device Info */}
+        <div className="flex-1 flex flex-col gap-3">
+          <KvItem title="Manufacturer Name" value={mud.mfgName} help={MudHelp.mfgName} />
+          <KvItem title="System Info" value={mud.systemInfo} help={MudHelp.systeminfo} />
+          <KvItem title="Last Updated" value={mud.lastUpdate} help={MudHelp.lastUpdate} />
+          <KvItem title="Cache Validity" suffix="hours" value={mud.cacheValidity} help={MudHelp.cacheValidity} />
+          <KvItem title="URL" value={mud.mudUrl} help={MudHelp.mudUrl} url />
+          <KvItem title="Signature" value={mud.mudSignature} help={MudHelp.mudSignature} url />
+          <KvItem title="Firmware Rev" value={mud.firmwareRev} help={MudHelp.firmwareRev} />
+          <KvItem title="Software Rev" value={mud.softwareRev} help={MudHelp.softwareRev} />
+          <KvItem title="Documentation" value={mud.documentation} url />
+        </div>
+        <div className="w-full h-full md:w-1/3 flex items-start justify-center md:justify-end">
+          <LoadFile />
+        </div>
+      </div>
     </div>
   );
 }
